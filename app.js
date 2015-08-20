@@ -1,9 +1,6 @@
 var httpProxy = require("http-proxy");
-//var HttpsProxyAgent = require('https-proxy-agent');
 var http = require("http");
-var https = require("https");
 var url = require("url");
-//var fs = require('fs');
 var net = require('net');
 
 var server = http.createServer(function (req, res) {
@@ -78,7 +75,9 @@ server.addListener('connect', function (req, socket, bodyhead) {
 
 });
 
-//
+//var https = require("https");
+//var fs = require('fs');
+//var HttpsProxyAgent = require('https-proxy-agent');
 //https.createServer({
 //  key: fs.readFileSync('key.pem'),
 //  cert: fs.readFileSync('cert.pem')
